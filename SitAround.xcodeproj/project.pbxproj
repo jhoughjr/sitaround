@@ -14,6 +14,7 @@
 		D8BCC19B294922F800C317D0 /* SitAroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BCC19A294922F800C317D0 /* SitAroundTests.swift */; };
 		D8BCC1A5294922F800C317D0 /* SitAroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BCC1A4294922F800C317D0 /* SitAroundUITests.swift */; };
 		D8BCC1A7294922F800C317D0 /* SitAroundUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BCC1A6294922F800C317D0 /* SitAroundUITestsLaunchTests.swift */; };
+		D8BCC1B5294923CB00C317D0 /* Citadel in Frameworks */ = {isa = PBXBuildFile; productRef = D8BCC1B4294923CB00C317D0 /* Citadel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8BCC1B5294923CB00C317D0 /* Citadel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +147,9 @@
 			dependencies = (
 			);
 			name = SitAround;
+			packageProductDependencies = (
+				D8BCC1B4294923CB00C317D0 /* Citadel */,
+			);
 			productName = SitAround;
 			productReference = D8BCC185294922F600C317D0 /* SitAround.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +222,9 @@
 				Base,
 			);
 			mainGroup = D8BCC17C294922F600C317D0;
+			packageReferences = (
+				D8BCC1B3294923CB00C317D0 /* XCRemoteSwiftPackageReference "Citadel" */,
+			);
 			productRefGroup = D8BCC186294922F600C317D0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -576,6 +584,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D8BCC1B3294923CB00C317D0 /* XCRemoteSwiftPackageReference "Citadel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/orlandos-nl/Citadel";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D8BCC1B4294923CB00C317D0 /* Citadel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8BCC1B3294923CB00C317D0 /* XCRemoteSwiftPackageReference "Citadel" */;
+			productName = Citadel;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D8BCC17D294922F600C317D0 /* Project object */;
 }
