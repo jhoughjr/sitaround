@@ -15,6 +15,7 @@
 		D8BCC1A5294922F800C317D0 /* SitAroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BCC1A4294922F800C317D0 /* SitAroundUITests.swift */; };
 		D8BCC1A7294922F800C317D0 /* SitAroundUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BCC1A6294922F800C317D0 /* SitAroundUITestsLaunchTests.swift */; };
 		D8BCC1B5294923CB00C317D0 /* Citadel in Frameworks */ = {isa = PBXBuildFile; productRef = D8BCC1B4294923CB00C317D0 /* Citadel */; };
+		D8BCC1B7294936C500C317D0 /* CentralDogma.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BCC1B6294936C500C317D0 /* CentralDogma.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		D8BCC1A0294922F800C317D0 /* SitAroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SitAroundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8BCC1A4294922F800C317D0 /* SitAroundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitAroundUITests.swift; sourceTree = "<group>"; };
 		D8BCC1A6294922F800C317D0 /* SitAroundUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitAroundUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D8BCC1B6294936C500C317D0 /* CentralDogma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralDogma.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				D8BCC18C294922F800C317D0 /* Assets.xcassets */,
 				D8BCC191294922F800C317D0 /* SitAround.entitlements */,
 				D8BCC18E294922F800C317D0 /* Preview Content */,
+				D8BCC1B6294936C500C317D0 /* CentralDogma.swift */,
 			);
 			path = SitAround;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8BCC1B7294936C500C317D0 /* CentralDogma.swift in Sources */,
 				D8BCC18B294922F600C317D0 /* ContentView.swift in Sources */,
 				D8BCC189294922F600C317D0 /* SitAroundApp.swift in Sources */,
 			);

@@ -6,21 +6,102 @@
 //
 
 import SwiftUI
+import Citadel
 
-struct ContentView: View {
+struct Logo:View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        HStack {
+            Image(systemName: "firewall")
+            Image(systemName:"fossil.shell")
         }
-        .padding()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+struct SSHClientView:View {
+    @ObservedObject var cd = CentralDogma.shared
+    
+    @State var hostAddress = "localhost"
+    
+    var body: some View {
+        
+        VStack(alignment: .leading) {
+            Text("Host")
+            TextField("SSH Host", text:$cd.host)
+            Button {
+                Task {
+                   try await cd.startClient()
+                }
+            } label: {
+                Text("Connect to SSH")
+            }
+
+        }
+        .onDisappear {
+            
+            DispatchQueue.main.async {
+                Task {
+                    try? await cd.stopServer()
+                }
+            }
+            
+        }
+        .onAppear {
+            DispatchQueue.main.async {
+                Task {
+                    try? await cd.startServer()
+                }
+            }
+            
+        }
+        
+    }
+}
+
+struct SSHServerView:View {
+    @ObservedObject var cd = CentralDogma.shared
+    
+    @State var connections = [String]()
+    @State var selected:String?
+    
+    var body: some View {
+    
+        VStack(alignment: .leading) {
+            Text("Connections")
+            List(selection: $selected) {
+                ForEach(connections, id:\.self) { con in
+                    Text(con)
+                }
+            }
+        }
+        .onDisappear {
+            DispatchQueue.main.async {
+                Task{
+                    try await cd.stopClient()
+                }
+            }
+        }
+        .onAppear {
+            DispatchQueue.main.async {
+                Task{
+                    try await cd.startClient()
+                }
+            }
+            
+        }
+    }
+}
+
+struct ContentView: View {
+    
+    var body: some View {
+        VStack {
+            HStack {
+                SSHClientView()
+                   
+                SSHServerView()
+                   
+            }
+        }
+        .padding()
     }
 }
