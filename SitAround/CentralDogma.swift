@@ -24,23 +24,10 @@ class AllwaysGoodAuthDelegate:NIOSSHServerUserAuthenticationDelegate {
 }
 import NIO
 
-class SDelegate:CitadelServerDelegate {
-    
-}
+
 class CentralDogma:ObservableObject {
 
-    private let group: NIO.MultiThreadedEventLoopGroup!
-    var serverChannel:Channel?
-    let logger = Logger.shared
-    
     static let shared = CentralDogma()
-    
-    init() {
-        group = MultiThreadedEventLoopGroup(numberOfThreads: 2)
-        server = SSHServer(channel: serverChannel,
-                           logger: logger,
-                           delegate: CitadelServerDelegate)
-    }
     
     @Published var host:String = "localhost"
     
