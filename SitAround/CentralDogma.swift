@@ -22,10 +22,25 @@ class AllwaysGoodAuthDelegate:NIOSSHServerUserAuthenticationDelegate {
     
     
 }
+import NIO
 
+class SDelegate:CitadelServerDelegate {
+    
+}
 class CentralDogma:ObservableObject {
+
+    private let group: NIO.MultiThreadedEventLoopGroup!
+    var serverChannel:Channel?
+    let logger = Logger.shared
     
     static let shared = CentralDogma()
+    
+    init() {
+        group = MultiThreadedEventLoopGroup(numberOfThreads: 2)
+        server = SSHServer(channel: serverChannel,
+                           logger: logger,
+                           delegate: CitadelServerDelegate)
+    }
     
     @Published var host:String = "localhost"
     
@@ -38,39 +53,27 @@ class CentralDogma:ObservableObject {
     
     /// starts the server
     func startServer() async throws {
-        server = try await SSHServer.host(
-            host: host,
-            port: 22,
-            hostKeys: [
-                // This hostkey changes every app boot, it's more practical to use a pre-generated one
-                NIOSSHPrivateKey(ed25519Key: .init())
-            ],
-            authenticationDelegate: AllwaysGoodAuthDelegate()
-        )
-        
+        debugPrint("starting server")
+       
     }
     
     /// stops the server
     func stopServer() async throws {
-        try await server?.close()
+
     }
     
     var client:SSHClient? {
         didSet {
-            debugPrint("initalized \(client)")
+            debugPrint("initalized \(String(describing: client))")
         }
     }
     
     func startClient() async throws {
-         client = try await SSHClient.connect(
-            host: host,
-            authenticationMethod: .passwordBased(username: "joannis", password: "s3cr3t"),
-            hostKeyValidator: .acceptAnything(), // Please use another validator if at all possible, it's insecure
-            reconnect: .never
-        )
+        
+        
     }
     
     func stopClient() async throws {
-        try await client?.close()
+
     }
 }

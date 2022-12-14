@@ -11,6 +11,7 @@ import SwiftUI
 struct SitAroundApp: App {
     var body: some Scene {
         WindowGroup {
+        
             ContentView()
         }
     }

@@ -29,31 +29,13 @@ struct SSHClientView:View {
             TextField("SSH Host", text:$cd.host)
             Button {
                 Task {
-                   try await cd.startClient()
+
                 }
             } label: {
                 Text("Connect to SSH")
             }
 
         }
-        .onDisappear {
-            
-            DispatchQueue.main.async {
-                Task {
-                    try? await cd.stopServer()
-                }
-            }
-            
-        }
-        .onAppear {
-            DispatchQueue.main.async {
-                Task {
-                    try? await cd.startServer()
-                }
-            }
-            
-        }
-        
     }
 }
 
@@ -73,21 +55,7 @@ struct SSHServerView:View {
                 }
             }
         }
-        .onDisappear {
-            DispatchQueue.main.async {
-                Task{
-                    try await cd.stopClient()
-                }
-            }
-        }
-        .onAppear {
-            DispatchQueue.main.async {
-                Task{
-                    try await cd.startClient()
-                }
-            }
-            
-        }
+      
     }
 }
 
@@ -97,9 +65,7 @@ struct ContentView: View {
         VStack {
             HStack {
                 SSHClientView()
-                   
                 SSHServerView()
-                   
             }
         }
         .padding()
