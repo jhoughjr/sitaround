@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D879730D294A4CDB00DEC50F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D879730C294A4CDB00DEC50F /* ContentView.swift */; };
+		D8797310294A4E7000DEC50F /* Citadel in Frameworks */ = {isa = PBXBuildFile; productRef = D879730F294A4E7000DEC50F /* Citadel */; };
 		D8BB3884294A4776000D2DE4 /* SitaroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BB3883294A4776000D2DE4 /* SitaroundApp.swift */; };
-		D8BB3886294A4776000D2DE4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BB3885294A4776000D2DE4 /* ContentView.swift */; };
 		D8BB3888294A4777000D2DE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8BB3887294A4777000D2DE4 /* Assets.xcassets */; };
 		D8BB388B294A4777000D2DE4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8BB388A294A4777000D2DE4 /* Preview Assets.xcassets */; };
 		D8BB3895294A4777000D2DE4 /* SitaroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BB3894294A4777000D2DE4 /* SitaroundTests.swift */; };
@@ -34,9 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D879730C294A4CDB00DEC50F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D8BB3880294A4776000D2DE4 /* Sitaround.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sitaround.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8BB3883294A4776000D2DE4 /* SitaroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitaroundApp.swift; sourceTree = "<group>"; };
-		D8BB3885294A4776000D2DE4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D8BB3887294A4777000D2DE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8BB388A294A4777000D2DE4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D8BB3890294A4777000D2DE4 /* SitaroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SitaroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8797310294A4E7000DEC50F /* Citadel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,9 +97,9 @@
 			isa = PBXGroup;
 			children = (
 				D8BB3883294A4776000D2DE4 /* SitaroundApp.swift */,
-				D8BB3885294A4776000D2DE4 /* ContentView.swift */,
 				D8BB3887294A4777000D2DE4 /* Assets.xcassets */,
 				D8BB3889294A4777000D2DE4 /* Preview Content */,
+				D879730C294A4CDB00DEC50F /* ContentView.swift */,
 			);
 			path = Sitaround;
 			sourceTree = "<group>";
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = Sitaround;
+			packageProductDependencies = (
+				D879730F294A4E7000DEC50F /* Citadel */,
+			);
 			productName = Sitaround;
 			productReference = D8BB3880294A4776000D2DE4 /* Sitaround.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = D8BB3877294A4776000D2DE4;
+			packageReferences = (
+				D879730E294A4E7000DEC50F /* XCRemoteSwiftPackageReference "Citadel" */,
+			);
 			productRefGroup = D8BB3881294A4776000D2DE4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,7 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8BB3886294A4776000D2DE4 /* ContentView.swift in Sources */,
+				D879730D294A4CDB00DEC50F /* ContentView.swift in Sources */,
 				D8BB3884294A4776000D2DE4 /* SitaroundApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,6 +591,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D879730E294A4E7000DEC50F /* XCRemoteSwiftPackageReference "Citadel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/orlandos-nl/Citadel";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D879730F294A4E7000DEC50F /* Citadel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D879730E294A4E7000DEC50F /* XCRemoteSwiftPackageReference "Citadel" */;
+			productName = Citadel;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D8BB3878294A4776000D2DE4 /* Project object */;
 }
