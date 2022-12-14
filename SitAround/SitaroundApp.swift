@@ -1,17 +1,16 @@
 //
-//  SitAroundApp.swift
-//  SitAround
+//  SitaroundApp.swift
+//  Sitaround
 //
-//  Created by Jimmy Hough Jr on 12/13/22.
+//  Created by Jimmy Hough Jr on 12/14/22.
 //
 
 import SwiftUI
 
 @main
-struct SitAroundApp: App {
+struct SitaroundApp: App {
     var body: some Scene {
         WindowGroup {
-        
             ContentView()
         }
     }

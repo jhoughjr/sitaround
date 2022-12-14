@@ -1,13 +1,13 @@
 //
-//  SitAroundUITestsLaunchTests.swift
-//  SitAroundUITests
+//  SitaroundUITestsLaunchTests.swift
+//  SitaroundUITests
 //
-//  Created by Jimmy Hough Jr on 12/13/22.
+//  Created by Jimmy Hough Jr on 12/14/22.
 //
 
 import XCTest
 
-final class SitAroundUITestsLaunchTests: XCTestCase {
+final class SitaroundUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

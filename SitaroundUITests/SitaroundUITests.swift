@@ -1,13 +1,13 @@
 //
-//  SitAroundUITests.swift
-//  SitAroundUITests
+//  SitaroundUITests.swift
+//  SitaroundUITests
 //
-//  Created by Jimmy Hough Jr on 12/13/22.
+//  Created by Jimmy Hough Jr on 12/14/22.
 //
 
 import XCTest
 
-final class SitAroundUITests: XCTestCase {
+final class SitaroundUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
