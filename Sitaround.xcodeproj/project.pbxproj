@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D879730D294A4CDB00DEC50F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D879730C294A4CDB00DEC50F /* ContentView.swift */; };
 		D8797310294A4E7000DEC50F /* Citadel in Frameworks */ = {isa = PBXBuildFile; productRef = D879730F294A4E7000DEC50F /* Citadel */; };
+		D8797312294A4F3900DEC50F /* CentralDogma.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8797311294A4F3900DEC50F /* CentralDogma.swift */; };
+		D8797314294A4F5D00DEC50F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8797313294A4F5D00DEC50F /* ContentView.swift */; };
 		D8BB3884294A4776000D2DE4 /* SitaroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BB3883294A4776000D2DE4 /* SitaroundApp.swift */; };
 		D8BB3888294A4777000D2DE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8BB3887294A4777000D2DE4 /* Assets.xcassets */; };
 		D8BB388B294A4777000D2DE4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8BB388A294A4777000D2DE4 /* Preview Assets.xcassets */; };
@@ -35,7 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D879730C294A4CDB00DEC50F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D8797311294A4F3900DEC50F /* CentralDogma.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CentralDogma.swift; path = Sitaround/CentralDogma.swift; sourceTree = "<group>"; };
+		D8797313294A4F5D00DEC50F /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = Sitaround/ContentView.swift; sourceTree = "<group>"; };
 		D8BB3880294A4776000D2DE4 /* Sitaround.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sitaround.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8BB3883294A4776000D2DE4 /* SitaroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitaroundApp.swift; sourceTree = "<group>"; };
 		D8BB3887294A4777000D2DE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +78,8 @@
 		D8BB3877294A4776000D2DE4 = {
 			isa = PBXGroup;
 			children = (
+				D8797313294A4F5D00DEC50F /* ContentView.swift */,
+				D8797311294A4F3900DEC50F /* CentralDogma.swift */,
 				D8BB3882294A4776000D2DE4 /* Sitaround */,
 				D8BB3893294A4777000D2DE4 /* SitaroundTests */,
 				D8BB389D294A4777000D2DE4 /* SitaroundUITests */,
@@ -99,7 +103,6 @@
 				D8BB3883294A4776000D2DE4 /* SitaroundApp.swift */,
 				D8BB3887294A4777000D2DE4 /* Assets.xcassets */,
 				D8BB3889294A4777000D2DE4 /* Preview Content */,
-				D879730C294A4CDB00DEC50F /* ContentView.swift */,
 			);
 			path = Sitaround;
 			sourceTree = "<group>";
@@ -265,8 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D879730D294A4CDB00DEC50F /* ContentView.swift in Sources */,
+				D8797312294A4F3900DEC50F /* CentralDogma.swift in Sources */,
 				D8BB3884294A4776000D2DE4 /* SitaroundApp.swift in Sources */,
+				D8797314294A4F5D00DEC50F /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +437,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,6 +467,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
